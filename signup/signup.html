@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+    <div id="main">
+        <div id="loginsignup">
+            <br><p style="font-size: 25px; "><b>Login</b> or <b>Signup</b></p>
+            <input id="mobileinput" type="number" placeholder="+91 | Mobile Number*">
+            <p>By continuing,i agree to the <a class="loginlink" href="">Terms of Use</a> & <a class="loginlink" href="">Privacy Policy</a></p>
+            <button id="loginbtn">CONTINUE</button>
+            <P>Have trouble logging in?<a class="loginlink" href="">Get help</a></P>
+        </div>
+    </div>
+</body>
+<script>
+    loginbtn = document.getElementById("loginbtn");
+    loginbtn.addEventListener("click",()=>{
+        mobileNumber = document.getElementById("mobileinput").value;
+        if(mobileNumber.length===10){
+            window.location.href = "veryfyOTP.html";
+        }
+        else{
+            alert("Invalid Mobile Number")
+        }
+    })
+</script>
+</html>
