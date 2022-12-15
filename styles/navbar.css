@@ -8,6 +8,7 @@ body {
     font-size: 14px !important;
     padding-top: 20px !important  ;
     z-index: 2 !important;
+    
   }
   
   #navbar-categories {
@@ -15,11 +16,13 @@ body {
     height: 50px;
     display: flex;
     justify-content: space-between;
+   
   }
   
   #navbar-search {
     font-size: 13px;
     border: none;
+    border:2px solid red;
   }
   
   #navbar-profile-bag-wish {
