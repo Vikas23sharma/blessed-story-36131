@@ -1,0 +1,70 @@
+.loginlink{
+    color: red;
+    text-decoration: none;
+}
+body{
+    background-color: rgb(240, 214, 219);
+}
+#loginbtn{
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 12PX;
+    width: 250PX;
+    border-radius: 12px;
+}
+#loginsignup{
+width: 350px;
+margin: auto;
+margin-top: 300px;
+background-color: white;
+/* text-align: center; */
+padding-left: 20px;
+height: 500px;
+}
+#mobileinput{
+    width: 250px;
+    padding: 12px;
+}
+#otp_div>input{
+    /* display: flex; */
+    width: 40px;
+    height: 50px;
+}
+.otp_ver{
+    color: red;
+    text-decoration: none;
+    font-size: 18px;
+}
+a{
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}
+#main_otp{
+    width: 400px;
+    background-color: white;
+    height: 600px;
+    padding-left: 40px;
+    margin: auto;
+    margin-top: 40px;
+    padding-top: 40px;
+}
+body{
+    font-style: normal;
+}
+#end_profile{
+width: 250px;
+background-color: white;
+padding-left:30px ;
+padding-right:30px ;
+padding-top: 20px;
+padding-bottom: 20px;
+}
+#red{
+    background-color: red;
+    color: white;
+    padding: 3px;
+    font-style: italic;
+    border-radius: 7px;
+}
