@@ -31,7 +31,7 @@
 /* border:1px solid orange; */
 }
 .mensProductsCont{
-  width:82%;
+  width:85%;
   border-top:1px solid #e9e9ed;
 }
 .mensProducts{
@@ -41,7 +41,7 @@ width:97%;
 display: grid;
 grid-template-columns: repeat(4,1fr);
 grid-template-rows: auto;
-column-gap: 40px;
+column-gap: 10px;
 row-gap: 25px;
 margin: 20px 0px 0px 23px;
 }
@@ -49,8 +49,8 @@ margin: 20px 0px 0px 23px;
   height: 403px;
 }
 .mensProductImages{
-  width:220px;
-  height:300px;
+  width:260px;
+  height:340px;
 }
 .mensPriceCont{
   display: flex;
