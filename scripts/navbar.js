@@ -2,7 +2,7 @@
 import mappingDataFetcher from "./home_page_catog_list.js";
 mappingDataFetcher();
 let map_data = JSON.parse(localStorage.getItem("category_array"));
-// console.log(map_data);
+console.log(map_data);
 let overlay = document.querySelector("#overlay");
 
 //Index --> color object for mapping
@@ -36,6 +36,7 @@ mapBox.addEventListener("mouseleave", function () {
 
 //Adding hover for the mapBox on navCategory
 navCategory.forEach((elem, index) => {
+  // elem.style.border = "2px solid red";
   if (index == 5) {
     return;
   }
@@ -71,6 +72,7 @@ function displayFlex(index) {
   mapCategoryData(current_data, index);
   navCategory[index].style.borderBottom = "4px solid " + map_colors[index];
   //Keep displaying data if the cursor moves from category selector to the hidden div
+
   mapBox.addEventListener("mouseover", function () {
     mapBox.innerHTML = "";
     mapCategoryData(current_data, index);
@@ -97,8 +99,8 @@ function mapCategoryData(data, index) {
     // currentBox.style.border = "1px solid red";
 
     currentBox.addEventListener("click", function () {
-      console.log("dfdf");
-      // console.log('dfd')
+      // console.log("dfdf");
+    
       // window.location.href = "./menInter.html"
     });
 
@@ -117,7 +119,7 @@ function mapCategoryData(data, index) {
       line.setAttribute("class", "nav_innerBox_text");
 
       line.textContent = elem[i];
-
+      
       currentBox.append(line);
     }
 
@@ -243,4 +245,4 @@ document
     if(event.key == "Enter") {
       window.location.href = "searchpage.html";
     }
-  })
+
