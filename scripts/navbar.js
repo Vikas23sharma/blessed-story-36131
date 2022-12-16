@@ -246,4 +246,3 @@ document
       window.location.href = "searchpage.html";
     }
 
-  })

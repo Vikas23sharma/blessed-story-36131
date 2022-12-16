@@ -23,6 +23,7 @@
     loginbtn.addEventListener("click",()=>{
         mobileNumber = document.getElementById("mobileinput").value;
         if(mobileNumber.length===10){
+            localStorage.setItem("myntra_login_mobile",mobileNumber)
             window.location.href = "veryfyOTP.html";
         }
         else{
