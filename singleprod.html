@@ -2,134 +2,200 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="profile.html">
-    <!-- Bootstrap Icons import  -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"
-    />
-    <!-- ----------------------- -->
+  <style>
+  #container{
+    display: flex;
+    justify-content: space-between;
+  }
 
-    <!-- Font Ihttps://us06web.zoom.us/j/85478445772mport -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap"
-      rel="stylesheet"
-    />
-    <!-- --------------------------- -->
+  #left{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 1%;
+    /* border: 1px solid red; */
+    width: 65%;
+    padding: 2%;
+  }
 
-    <!--Bootstrap CSS start-->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
-      crossorigin="anonymous"
-    />
-    <!--Bootstrap CSS end-->
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+  #left img{
+    width: 98%;
+    /* border: 1px solid green; */
+  }
 
-    <!-- Linking the CSS  index.css-->
-    <link rel="stylesheet" href="./styles/navbar.css" />
-    <!-- -------------------------- -->
+  #right{
+    /* border: 1px solid blue; */
+    padding: 0% 3%;
+    text-align: left;
+  }
+
+  #size{
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid red; */
+    padding: 2%;
+  }
+
+  #size>div{
+    border: 1px solid black;
+    text-align: center;
+    padding: 2% 3%;
+    border-radius: 20px;
+  }
+
+  #buttons{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8%;
+    margin-bottom: 8%;
+  }
+
+  #bag{
+    width: 100%;
+    font-size: 25px;
+    background-color: rgb(255, 48, 117);
+    color: white;
+    border: 0px solid grey;
+    border-radius: 5px;
+  }
+
+  #wishlist{
+    width: 100%;
+    font-size: 25px;
+    background-color: white;
+    border: 1px solid grey;
+  }
+
+  #pin{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid grey;
+    padding: 3% 5%;
+    font-size: 15px;
+    width: 70%;
+  }
+
+  p{color: grey;}
+
+  #below_pin p{
+    color: black;
+  }
+
+  #below_bestOffer>ul li{
+    text-align: left;
+    margin-bottom: 3%;
+  }
+
+  .grey{
+    color: gray;
+  }
+
+  .pink{
+    color: rgb(255, 71, 102);
+  }
+   
+  .teal{
+    color:rgb(0, 114, 114)
+  }
+
+  .orange{
+    color: orange;
+  }
+
+  #left>div:hover{
+  width: 101%;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;  
+  }
+
+  #size>div:hover{
+    border: 2px solid rgb(255, 71, 102);
+    cursor: pointer;
+  }
+  
+  #tshirt_description{
+    font-size: 22px;
+  }
+
+  #small{
+    font-size: 15px;
+  }
+ 
+  </style>  
 </head>
 
 <body>
-    <nav
-    class="navbar navbar-expand-lg navbar-light bg-light position-fixed w-100"
-  >
-    <a class="navbar-brand ms-5 me-4 mb-4" href="./index.html">
-      <img
-        src="./Photos/logo.jpg"
-        width="60"
-        height="40"
-        alt=""
-      />
-    </a>
-
-    <div id="navbar-categories" class="me-5 ms-1">
-      <div class="navbar-categories-li">MEN</div>
-      <div class="navbar-categories-li">WOMEN</div>
-      <div class="navbar-categories-li">KIDS</div>
-      <div class="navbar-categories-li">HOME & LIVING</div>
-      <div class="navbar-categories-li">BEAUTY</div>
-      <div class="navbar-categories-li">STUDIO</div>
-    </div>
-
-    <form class="my-2 my-lg-0 w-25 ms-5 d-flex me-5" id="navbar-search-box">
-      <i class="bi bi-search mt-1 me-2"></i>
-      <input
-        class="form-control mr-sm-2 w-100"
-        id="navbar-search"
-        type="search"
-        placeholder="Search for products, brands and more"
-      />
-    </form>
-
-    <div id="navbar-profile-bag-wish" class="d-flex ms-5">
-      <div class="navbar-profile-items">
-        <i class="bi bi-person"></i>profile
-      </div>
-      <div class="navbar-profile-items">
-        <i class="bi bi-heart"></i>Wishlist
-      </div>
-      <div class="navbar-profile-items"><i class="bi bi-handbag"></i>Bag <div id="cart-counter"></div></div>
-    </div>
-    <div class="navbar-mapping-div hidden fade-in"></div>
-    <div class="navbar-studio-div hidden fade-in">
-      <img src="./photos/Studio_ss.png" alt="" />
-    </div>
-    <div class="navbar-profile-div fade-in hidden">
-      <div>
-        <div class="mb-1" id="welcome">Welcome</div>
-        <p class="profile_text number_div">
-          To access account and manage orders
-        </p>
-      </div>
-      <button class="btn border profile_button">LOGIN / SIGNUP</button>
-      <hr />
-      <div>
-        <p class="profile_text">Orders</p>
-        <p class="profile_text">Wishlist</p>
-        <p class="profile_text">Gift Cards</p>
-        <p class="profile_text">Contact Us</p>
-        <p class="profile_text">Myntra Insider</p>
-      </div>
-      <hr />
-      <div>
-        <p class="profile_text">Myntra Credit</p>
-        <p class="profile_text">Coupons</p>
-        <p class="profile_text">Saved Cards</p>
-        <p class="profile_text">Contact Us</p>
-        <p class="profile_text">Saved Addresses</p>
-      </div>
-      <hr class="hidden" id="loginSpecial" />
-      <div class="hidden" id="loginSpecial">
-        <p class="profile_text">Edit Profile</p>
-        <p class="profile_text">Logout</p>
-      </div>
-    </div>
-  </nav>
-  <div id="overlay" class="hidden"></div>
-
-  
-  Bootstrap JS -->
-  <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-    crossorigin="anonymous"
-  ></script>
-  <!-- Bootstrap JS -->
-
-
-  <!-- Linking the Script file navbar.js -->
-  <script type="module" src="./scripts/navbar.js"></script>
-  <!-- -------------------------- ------->
+ 
   <!-- ----single-product-description--->
-  <h1 id="path">Home/clothing/Men Clothing/Tshirts</h1>
+  <h4 id="path"><b class="grey">Home</b> /<b class="grey">Clothing</b>  /<b class="grey">Men Clothing</b>  /<b class="grey">Tshirts</b>  /<b> Huetrap Tshirts</b> /<b>More By Huetrap</b>  </h4>
+
+  <div id="container">
+    <div id="left">
+      <div id="img1"><img src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/1700830/2019/4/8/3f06fe25-1ce2-4e1e-88e9-7a9d26b4f0bf1554699735416-WROGN-Men-Rust-Red-High-Density-Print-Round-Neck-T-shirt-961-1.jpg" alt="1"></div>
+      <div id="img2"><img src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/1700830/2019/4/8/7f3d29b4-4465-4fd6-bd2a-160c425cf7b31554699735396-WROGN-Men-Rust-Red-High-Density-Print-Round-Neck-T-shirt-961-2.jpg" alt="2"></div>
+      <div id="img3"><img src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/1700830/2019/4/8/b54ceacb-54ed-43a5-ac32-ae628aba043b1554699735376-WROGN-Men-Rust-Red-High-Density-Print-Round-Neck-T-shirt-961-3.jpg" alt="3"></div>
+      <div id="img4"><img src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/1700830/2019/4/8/a11913ed-bd40-48e6-bd8c-95f529cabcec1554699735359-WROGN-Men-Rust-Red-High-Density-Print-Round-Neck-T-shirt-961-4.jpg" alt="4"></div>
+    </div>
+    <div id="right">
+     <h2 id="brand">Huetrap</h2>
+     <p id="tshirt_description">Men Beige & Black Typography Printed Sustainable T-shirt</p>
+     <div id="rating">4★|13.1K Rating </div>
+     <hr>
+     <h2 id="price">₹ 340 <i class="orange">(69% OFF)</i></h2>
+     <p class="teal">inclusive of all taxes</p>
+     <h4>SELECT SIZE</h4>
+     <div id="size">
+      <div id="s">
+        <div>S</div>
+        <div class="grey">₹ 340</div>
+      </div>
+      <div id="M">
+        <div>M</div>
+        <div class="grey">₹ 340</div>
+      </div>
+      <div id="L">
+        <div>L</div>
+        <div class="grey">₹ 340</div>
+      </div>
+      <div id="XL">
+        <div>XL</div>
+        <div class="grey">₹ 340</div>
+      </div>
+      <div id="XXL">
+        <div>XXL</div>
+        <div class="grey">₹ 340</div>
+      </div>
+     </div>
+     <div id="buttons">
+      <div><button id="bag"> ADD TO BAG</button></div>
+      <div><button id="wishlist">WISHLIST ♡</button></div>
+     </div>
+     <hr>
+     <h3>DELIVERY OPTIONS</h3>
+     <div id="pin">
+      <div class="grey">ENTER PIN</div>
+      <div class="pink">CHECK</div>
+    </div>
+    <p id="small">Please enter PIN code to check delivery time & Pay on Delivery Availability</p>
+    <div id="below_pin">
+    <p>100% Original Products</p>
+    <p>Pay on delivery might be available</p>
+    <p>Easy 30 days returns and exchanges</p>
+    <p>Try & Buy might be available</p>
+    </div>
+    <h3>Best Offers</h3>
+    <div id="below_bestOffer">
+      <h4>Best Price:<b><i class="pink">₹ 226</i></b></h4>
+      <ul>
+        <li>Coupon Discount: Rs. 114 off (check cart for final savings)</li>
+        <li>Applicable on: Orders above Rs. 599 (only on first purchase)</li>
+        <li>Coupon code:<B>MYNTRA200</B> </li>
+      </ul>
+      <h4>EMI options available</h4>
+      <ul>
+        <li>EMI starting from Rs.16/month</li>
+      </ul>
+    </div>
+    </div>
+  </div>
 
   
 
@@ -155,5 +221,6 @@
     }
     x()
 
-// document.querySelector("#path").innerHTML=`Home/clothing/Men Clothing/Tshirts`
+
+
 </script>
