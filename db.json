@@ -1,5 +1,5 @@
 {
-  "posts": [
+  "posts" : [
     {
       "id": 1,
       "title": "json-server",
@@ -13,7 +13,7 @@
       "postId": 1
     }
   ],
-  "Products":[
+  "Products" : [
     {
       "id": 7,
       "categories": "tshirt",
