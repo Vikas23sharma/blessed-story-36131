@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <style>
+  #container{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #left{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 1%;
+    /* border: 1px solid red; */
+    width: 65%;
+    padding: 2%;
+  }
+
+  #left img{
+    width: 98%;
+    /* border: 1px solid green; */
+  }
+
+  #right{
+    /* border: 1px solid blue; */
+    padding: 0% 3%;
+    text-align: left;
+  }
+
+  #size{
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid red; */
+    padding: 2%;
+  }
+
+  #size>div{
+    border: 1px solid black;
+    text-align: center;
+    padding: 2% 3%;
+    border-radius: 20px;
+  }
+
+  #buttons{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8%;
+    margin-bottom: 8%;
+  }
+
+  #bag{
+    width: 100%;
+    font-size: 25px;
+    background-color: rgb(255, 48, 117);
+    color: white;
+    border: 0px solid grey;
+    border-radius: 5px;
+  }
+
+  #wishlist{
+    width: 100%;
+    font-size: 25px;
+    background-color: white;
+    border: 1px solid grey;
+  }
+
+  #pin{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid grey;
+    padding: 3% 5%;
+    font-size: 15px;
+    width: 70%;
+  }
+
+  p{color: grey;}
+
+  #below_pin p{
+    color: black;
+  }
+
+  #below_bestOffer>ul li{
+    text-align: left;
+    margin-bottom: 3%;
+  }
+
+  .grey{
+    color: gray;
+  }
+
+  .pink{
+    color: rgb(255, 71, 102);
+  }
+   
+  .teal{
+    color:rgb(0, 114, 114)
+  }
+
+  .orange{
+    color: orange;
+  }
+
+  #left>div:hover{
+  width: 101%;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;  
+  }
+
+  #size>div:hover{
+    border: 2px solid rgb(255, 71, 102);
+    cursor: pointer;
+  }
+  
+  #tshirt_description{
+    font-size: 22px;
+  }
+
+  #small{
+    font-size: 15px;
+  }
+ 
+  </style>  
+</head>
+
+<body>
+ 
+  <!-- ----single-product-description--->
+  <h4 id="path"><b class="grey">Home</b> /<b class="grey">Clothing</b>  /<b class="grey">Men Clothing</b>  /<b class="grey">Tshirts</b>  /<b> Huetrap Tshirts</b> /<b>More By Huetrap</b>  </h4>
+
+  <div id="container">
+    <div id="left">
+      <div id="img1"><img src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/1700830/2019/4/8/3f06fe25-1ce2-4e1e-88e9-7a9d26b4f0bf1554699735416-WROGN-Men-Rust-Red-High-Density-Print-Round-Neck-T-shirt-961-1.jpg" alt="1"></div>
+      <div id="img2"><img src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/1700830/2019/4/8/7f3d29b4-4465-4fd6-bd2a-160c425cf7b31554699735396-WROGN-Men-Rust-Red-High-Density-Print-Round-Neck-T-shirt-961-2.jpg" alt="2"></div>
+      <div id="img3"><img src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/1700830/2019/4/8/b54ceacb-54ed-43a5-ac32-ae628aba043b1554699735376-WROGN-Men-Rust-Red-High-Density-Print-Round-Neck-T-shirt-961-3.jpg" alt="3"></div>
+      <div id="img4"><img src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/1700830/2019/4/8/a11913ed-bd40-48e6-bd8c-95f529cabcec1554699735359-WROGN-Men-Rust-Red-High-Density-Print-Round-Neck-T-shirt-961-4.jpg" alt="4"></div>
+    </div>
+    <div id="right">
+     <h2 id="brand">Huetrap</h2>
+     <p id="tshirt_description">Men Beige & Black Typography Printed Sustainable T-shirt</p>
+     <div id="rating">4★|13.1K Rating </div>
+     <hr>
+     <h2 id="price">₹ 340 <i class="orange">(69% OFF)</i></h2>
+     <p class="teal">inclusive of all taxes</p>
+     <h4>SELECT SIZE</h4>
+     <div id="size">
+      <div id="s">
+        <div>S</div>
+        <div class="grey">₹ 340</div>
+      </div>
+      <div id="M">
+        <div>M</div>
+        <div class="grey">₹ 340</div>
+      </div>
+      <div id="L">
+        <div>L</div>
+        <div class="grey">₹ 340</div>
+      </div>
+      <div id="XL">
+        <div>XL</div>
+        <div class="grey">₹ 340</div>
+      </div>
+      <div id="XXL">
+        <div>XXL</div>
+        <div class="grey">₹ 340</div>
+      </div>
+     </div>
+     <div id="buttons">
+      <div><button id="bag"> ADD TO BAG</button></div>
+      <div><button id="wishlist">WISHLIST ♡</button></div>
+     </div>
+     <hr>
+     <h3>DELIVERY OPTIONS</h3>
+     <div id="pin">
+      <div class="grey">ENTER PIN</div>
+      <div class="pink">CHECK</div>
+    </div>
+    <p id="small">Please enter PIN code to check delivery time & Pay on Delivery Availability</p>
+    <div id="below_pin">
+    <p>100% Original Products</p>
+    <p>Pay on delivery might be available</p>
+    <p>Easy 30 days returns and exchanges</p>
+    <p>Try & Buy might be available</p>
+    </div>
+    <h3>Best Offers</h3>
+    <div id="below_bestOffer">
+      <h4>Best Price:<b><i class="pink">₹ 226</i></b></h4>
+      <ul>
+        <li>Coupon Discount: Rs. 114 off (check cart for final savings)</li>
+        <li>Applicable on: Orders above Rs. 599 (only on first purchase)</li>
+        <li>Coupon code:<B>MYNTRA200</B> </li>
+      </ul>
+      <h4>EMI options available</h4>
+      <ul>
+        <li>EMI starting from Rs.16/month</li>
+      </ul>
+    </div>
+    </div>
+  </div>
+
+  
+
+  
+</body>
+
+</html>
+<script src="db.json"></script>
+<script>
+    async function x() {
+        try {
+            let res = await fetch("http://localhost:3000/Products", {
+                method: "GET",
+                headers: { "Content-Type": "application/json" }
+            })
+
+            let data = await res.json()
+            console.log(data)
+            localStorage.setItem("data", JSON.stringify(data))
+        } catch (error) {
+            console.log(error)
+        }
+    }
+    x()
+
+
+
+</script>
