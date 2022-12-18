@@ -2,7 +2,7 @@
 import mappingDataFetcher from "./home_page_catog_list.js";
 mappingDataFetcher();
 let map_data = JSON.parse(localStorage.getItem("category_array"));
-console.log(map_data);
+// console.log(map_data);
 let overlay = document.querySelector("#overlay");
 
 //Index --> color object for mapping
@@ -69,6 +69,7 @@ function displayFlex(index) {
 
   //Write data mapping function here
   let current_data = map_data[index];
+  // console.log('current_data:', current_data)
   mapCategoryData(current_data, index);
   navCategory[index].style.borderBottom = "4px solid " + map_colors[index];
   //Keep displaying data if the cursor moves from category selector to the hidden div
@@ -93,21 +94,24 @@ function mapCategoryData(data, index) {
     return;
   }
   data.forEach((elem) => {
+    // console.log('elem:', elem)
     let currentBox = document.createElement("div");
 
     currentBox.setAttribute("id", "nav_map_innerBox");
     // currentBox.style.border = "1px solid red";
 
     currentBox.addEventListener("click", function () {
-      // console.log("dfdf");
+      console.log("dfdf");
     
-      // window.location.href = "./menInter.html"
+      window.location.href = "./menInter.html"
     });
 
     //mapping the internal data on the current box
     for (let i = 0; i < elem.length; i++) {
       let line = document.createElement("p");
-
+      let anchor=document.createElement("a")
+     anchor.setAttribute("href","https://github.com/PrashantGIT7388/blessed-story-3613")
+     anchor.append(line)
       line.style.cursor = "pointer";
       if (i == 0) {
         //   line.setAttribute('class', "innerHeading");
@@ -118,9 +122,11 @@ function mapCategoryData(data, index) {
 
       line.setAttribute("class", "nav_innerBox_text");
 
-      line.textContent = elem[i];
-      
-      currentBox.append(line);
+      line.innerText= elem[i];
+      // let nav_innerBox_text=document.getElementsByClassName("nav_innerBox_text");
+   
+    //  console.log(elem[1]) 
+      currentBox.append(anchor);
     }
 
     mapBox.append(currentBox);
@@ -245,4 +251,5 @@ document
     if(event.key == "Enter") {
       window.location.href = "searchpage.html";
     }
+  })
 

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>myntra</title>
+    <style>
+        input{
+            padding: 10px;
+        }
+        body {
+  font-family: Arial, sans-serif;
+}
+    </style>
+</head>
+<body>
+    <div style="display: flex;padding: 10px; justify-content: space-evenly;background-color: rgb(176, 235, 235);" id="bag_navbar">
+        <div style="margin-top: 17px;width: 100px;"><img width="100%" src="https://www.freepnglogos.com/uploads/logo-myntra-png/myntra-logo-m-png-3.png" alt=""></div>
+        <div  style="margin-top: 17px; width:350px; display: flex; justify-content: space-evenly;">
+            <p>BAG ----------<span style="color:rgb(252, 12, 48);text-decoration: underline; "> ADDRESS</span><span>---------- PAYMENT</span></p>
+            <!-- <p>---- ADDRESS ---</p>
+            <p>--- PAYMENT</p> -->
+        </div>
+        <div style="width: 250px;display: flex;"> 
+        <div><img style="width:15%; width:50px" src="https://img.freepik.com/premium-vector/100-secure-logo-secure-badge-design-secure-vector-icons-secure-payments_526569-748.jpg?w=2000" alt=""></div>
+        <div style="margin-top: 17px;">100% S E C U R E</div>
+        </div>
+    </div><br><br><br>
+    <div style="width: 70%; display: flex;justify-content: space-evenly;margin: auto;gap: 30px;">
+        <div style=" width: 60%; ">
+            <div style="display: flex;flex-direction: column; width: 60%; margin: auto;">
+                <p>CONTACT DETAILS</p>
+                <input type="text" placeholder="Name"><br>
+                <input type="number" placeholder="Mobile No.">
+                <p>ADDRRESS</p>
+                <input type="number" placeholder="Pin Code"><br>
+                <input type="text" placeholder="Address(House No Building Street Area)*"><br>
+                <input type="text" placeholder="Locality/Town"><br>
+                <div>
+                    <input type="text" placeholder="City/District*">
+                    <input type="text" placeholder="State*">
+                </div>
+                <p>SAVE ADDRESS AS</p>
+                <div style="display: flex;justify-content: space-evenly;">
+                    <button style="padding: 10px;border: 2px solid red; border-radius: 12px;" onmouseover="bigImg(this)" onmouseout="normalImg(this)">Home</button><br>
+                    <button style="padding: 10px;border: 2px solid red; border-radius: 12px;" onmouseover="bigImg(this)" onmouseout="normalImg(this)">Work</button><br>
+                </div><br>
+                <div><input type="checkbox">make this my dafault address <br></div><br>
+                <button onmouseover="bigImg(this)" onmouseout="normalImg(this)" id="add-address" style="font-size: 20px; padding: 5px; color: white;background-color: red;border: none;">ADD ADDRESS</button>
+            </div>
+        </div>
+        <div style=" width: 40%;">
+            <div style="width: 70%; margin: auto;">
+                <h3>PRICE DETAILS(1 ITEM)</h3>
+                <div style="display: flex; justify-content: space-between;">
+                    <div>Total MRP</div>
+                    <div>$10,999</div>
+                </div>
+                <div  style="display: flex;  justify-content: space-between;">
+                    <div>Discount on MRP</div>
+                    <div>-$7,700</div>
+                </div>
+                <div  style="display: flex;  justify-content: space-between;">
+                    <div>Coupon Discount</div>
+                    <div>Apply Coupon</div>
+                </div>
+                <div style="display: flex;  justify-content: space-between;">
+                    <div>Convenience Fee <span style="color: red;">Know More</span></div>
+                    <div>FREE</div>
+                </div><br><hr>
+                <div style="display: flex;  justify-content: space-between;">
+                    <div>Total Amount</div>
+                    <div>$3,299</div>
+                </div><br>
+                <button id="place-order" style=" font-size: 20px;padding: 7px;border: none; color: white;background-color: rgb(144, 131, 239);width: 100%;">PLACE ORDER</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    let address = document.getElementById("add-address");
+    address.addEventListener("click",function(){
+        window.location.href  = "payment.html";
+    })
+    function bigImg(x) {
+  x.style.color = "white";
+  x.style.padding = "10px";
+  x.style.backgroundColor = "teal";
+}
+
+function normalImg(x) {
+  x.style.padding = "5px"
+  x.style.color = "white";
+  x.style.backgroundColor = "rgb(207, 72, 72)";
+}
+</script>
+</html>

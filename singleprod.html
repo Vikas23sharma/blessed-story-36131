@@ -185,8 +185,7 @@
       "rating": 4.2,
       "count": 3.3
     }
-  localStorage.setItem("individualProduct",JSON.stringify(obj1))
-    
+
 let obj=JSON.parse(localStorage.getItem("individualProduct"))
 let cartarr=JSON.parse(localStorage.getItem("cartarr"))||[];
 
@@ -264,8 +263,6 @@ document.querySelector("#bag").addEventListener("click",()=>{
   cartarr.push(obj)
   localStorage.setItem("cartarr",JSON.stringify(cartarr))
 })
-
-
 
 
 
