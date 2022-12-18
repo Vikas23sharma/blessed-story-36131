@@ -1,13 +1,13 @@
 let sub_category_array = [
     [
       [
-        "Footwear",
-        "Smart Watches",
-        "Smart Watch Phone",
-        "Smart Wristband",
-        "Smart Watch Accessories",
-        "Sport Watch",
-        "Smart Health Watch",
+        "Topwear",
+        "T-shirts",
+        "Casual Shirts",
+        "Formal Shirts",
+        "Sweaters",
+        "Jackets",
+        "Suits",
       ],
   
       [
