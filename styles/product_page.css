@@ -71,14 +71,14 @@ margin: 20px 0px 0px 23px;
 .mensBrand{
   font-weight:650;
   font-size:15px;
+  line-height: 0%;
   /* color:blue */
 }
 
 .mensPriceCont{
   font-weight:700;
   font-size:14px;
-  /* position:absolute; */
-  /* color:red */
+  line-height: 0%;
 }
 .mensPriceCont>span:nth-child(2){
   font-weight:300;
@@ -332,4 +332,19 @@ display: none;
     height: 14px;
      border-radius: 50px; 
      margin:-2px 13px 0px -5px
+  }
+
+  .sortDiv{
+    display: flex;
+    justify-content: space-between;
+    align-items:baseline;
+    padding:0 10px;
+  }
+  #sortDiv{
+    width:200px;
+    height:35px;
+  }
+  .mensCategory{
+    color:rgb(133, 132, 132);
+   line-height: 15px;
   }

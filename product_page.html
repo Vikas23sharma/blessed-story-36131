@@ -42,11 +42,18 @@
     </p>
     <h6 class="alignHeading" style="margin-top: 10px">
       Men T-shirts:
-      <span style="font-weight: 400; color: #8e929e; padding-left: 2px"
-        >--- items</span
+      <span style="font-weight: 400; color: #8e929e; padding-left: 2px" id="totalProducts"
+        ></span
       >
     </h6>
-    <h6 class="filterheading">FILTERS</h6>
+    <div class="sortDiv">
+      <h6 class="filterheading">FILTERS</h6>
+      <select name="" id="sortDiv">
+        <option value="">Sort By:</option>
+        <option value="lth">Low to High</option>
+        <option value="htl">High to Low</option>
+      </select>
+    </div>
 
     <div class="mensContainer">
       <div class="mensFilter">
@@ -55,7 +62,7 @@
           <div class="filterDivs">
             <label class="checkboxContainer">
               <p>Tshirts <span>(105)</span></p>
-              <input class="filterInputs" type="checkbox" name="T-shirt" />
+              <input class="filterInputs" type="checkbox" name="tshirt" />
               <span class="checkmark"></span>
             </label>
             <label class="checkboxContainer">
@@ -125,6 +132,11 @@
         <div class="productsCategories">
           <h6>PRICE</h6>
           <div class="filterDivs">
+            <label class="checkboxContainer">
+              <p>Rs. 0 to Rs. 100 <span>(0)</span></p>
+              <input class="filterInputs" type="checkbox" name="price5" />
+              <span class="checkmark"></span>
+            </label>
             <label class="checkboxContainer">
               <p>Rs. 134 to Rs. 2348 <span>(305)</span></p>
               <input class="filterInputs" type="checkbox" name="price1" />
