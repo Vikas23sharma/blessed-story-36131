@@ -3,6 +3,11 @@
 
 <head>
   <style>
+    #span{
+      opacity: 50%;
+      font-size: smaller;
+      text-decoration-line: line-through;
+    }
   #container{
     display: flex;
     justify-content: space-between;
@@ -17,6 +22,10 @@
     padding: 2%;
   }
 
+  #left div{
+    transition: .5s;
+
+  }
   #left img{
     width: 98%;
     /* border: 1px solid green; */
@@ -36,10 +45,14 @@
   }
 
   #size>div{
-    border: 1px solid black;
+    border: 1.2px solid black;
     text-align: center;
-    padding: 2% 3%;
-    border-radius: 20px;
+    padding: 4% 3% 2% 3%;
+    border-radius: 50px;
+    height: 30px;
+    width: 32px;
+    font-size: 18px;
+    transition: .3s;
   }
 
   #buttons{
@@ -50,19 +63,26 @@
   }
 
   #bag{
-    width: 100%;
-    font-size: 25px;
+    width: 220px;
+    height: 40px;
+    padding: 15px 10px 40px 10px;
+    font-size: 20px;
     background-color: rgb(255, 48, 117);
     color: white;
     border: 0px solid grey;
-    border-radius: 5px;
+    border-radius: 2px;
+    cursor: pointer;
   }
+  
 
   #wishlist{
-    width: 100%;
-    font-size: 25px;
+    width: 220px;
+    height: 55px;
+    font-size: 20px;
     background-color: white;
     border: 1px solid grey;
+    cursor: pointer;
+
   }
 
   #pin{
@@ -107,8 +127,11 @@
   }
 
   #size>div:hover{
-    border: 2px solid rgb(255, 71, 102);
+    border: 1.2px solid rgb(255, 71, 102);
+    font-size: 21px;
     cursor: pointer;
+    padding: 4% 3% 2% 3%;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   }
   
   #tshirt_description{
@@ -118,6 +141,11 @@
   #small{
     font-size: 15px;
   }
+
+  /* .size-btn{
+    width: 40px;
+    border-radius: 90%;
+  } */
  
   </style>  
 </head>
@@ -125,43 +153,79 @@
 <body>
  
   <!-- ----single-product-description--->
-  <h4 id="path"><b class="grey">Home</b> /<b class="grey">Clothing</b>  /<b class="grey">Men Clothing</b>  /<b class="grey">Tshirts</b>  /<b> Huetrap Tshirts</b> /<b>More By Huetrap</b>  </h4>
+  <h4 id="path"><b class="grey">Home</b> /<b class="grey">Clothing</b>  /<b class="grey">Men Clothing</b>  /<b class="grey">Tshirts</b></h4> 
+   <!-- /<b> Huetrap Tshirts</b> /<b>More By Huetrap</b>   -->
 
   <div id="container">
-    <div id="left">
-      <div id="img1"><img src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/1700830/2019/4/8/3f06fe25-1ce2-4e1e-88e9-7a9d26b4f0bf1554699735416-WROGN-Men-Rust-Red-High-Density-Print-Round-Neck-T-shirt-961-1.jpg" alt="1"></div>
-      <div id="img2"><img src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/1700830/2019/4/8/7f3d29b4-4465-4fd6-bd2a-160c425cf7b31554699735396-WROGN-Men-Rust-Red-High-Density-Print-Round-Neck-T-shirt-961-2.jpg" alt="2"></div>
-      <div id="img3"><img src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/1700830/2019/4/8/b54ceacb-54ed-43a5-ac32-ae628aba043b1554699735376-WROGN-Men-Rust-Red-High-Density-Print-Round-Neck-T-shirt-961-3.jpg" alt="3"></div>
-      <div id="img4"><img src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/1700830/2019/4/8/a11913ed-bd40-48e6-bd8c-95f529cabcec1554699735359-WROGN-Men-Rust-Red-High-Density-Print-Round-Neck-T-shirt-961-4.jpg" alt="4"></div>
+    <!-- append here -->
+  </div>
+</body>
+
+</html>
+<script src="db.json"></script>
+<script>
+  let obj1={
+      "id": 12,
+      "categories": "tshirt",
+      "size": "Sizes : 39, 40, 42, 44...",
+      "title": "Black Printed Slim Fit Pure Cotton T-shirt",
+      "price": 494,
+      "gender": "men",
+      "description": "Black Printed Slim Fit Pure Cotton T-shirt",
+      "brand": "WROGN",
+      "color": "Black",
+      "discount": 45,
+      "off_price": 899,
+      "images": {
+        "image1": "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/1320997/2016/7/19/11468929336914-WROGN-Black-Printed-Slim-Fit-T-shirt-4071468929335948-1.jpg",
+        "image2": "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/1320997/2016/7/19/11468929336885-WROGN-Black-Printed-Slim-Fit-T-shirt-4071468929335948-2.jpg",
+        "image3": "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/1320997/2016/7/19/11468929336863-WROGN-Black-Printed-Slim-Fit-T-shirt-4071468929335948-3.jpg",
+        "image4": "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/1320997/2022/3/2/19dbaa30-f887-4e11-a90c-e8d1eba6e7bc1646224207918-WROGN-Black-Printed-Slim-Fit-Pure-Cotton-T-shirt-87316462242-6.jpg"
+      },
+      "rating": 4.2,
+      "count": 3.3
+    }
+  localStorage.setItem("individualProduct",JSON.stringify(obj1))
+    
+let obj=JSON.parse(localStorage.getItem("individualProduct"))
+let cartarr=JSON.parse(localStorage.getItem("cartarr"))||[];
+
+let main=document.querySelector("#container");
+main.innerHTML=`
+<div id="left">
+      <div id="img1"><img src="${obj.images.image1}" alt="1"></div>
+      <div id="img2"><img src="${obj.images.image2}" alt="2"></div>
+      <div id="img3"><img src="${obj.images.image3}" alt="3"></div>
+      <div id="img4"><img src="${obj.images.image4}" alt="4"></div>
     </div>
     <div id="right">
-     <h2 id="brand">Huetrap</h2>
-     <p id="tshirt_description">Men Beige & Black Typography Printed Sustainable T-shirt</p>
-     <div id="rating">4★|13.1K Rating </div>
+     <h2 id="brand">${obj.brand}</h2>
+     <p id="tshirt_description">${obj.title}</p>
+     <div id="rating">${obj.rating}★ | ${obj.count} Rating </div>
      <hr>
-     <h2 id="price">₹ 340 <i class="orange">(69% OFF)</i></h2>
-     <p class="teal">inclusive of all taxes</p>
-     <h4>SELECT SIZE</h4>
+     <h2 id="price">₹ ${obj.price}  <span id="span">MRP  ₹${obj.off_price} </span> <i class="orange">  (${obj.discount}% OFF)</i></h2>
+     <p class="teal">inclusive of all taxes</p> 
+     <h4>SELECT SIZE</h4> 
      <div id="size">
-      <div id="s">
+      <div class="size-btn">
         <div>S</div>
-        <div class="grey">₹ 340</div>
+        
       </div>
-      <div id="M">
+      <div class="size-btn">
         <div>M</div>
-        <div class="grey">₹ 340</div>
+        
       </div>
-      <div id="L">
+      <div class="size-btn">
         <div>L</div>
-        <div class="grey">₹ 340</div>
+        
       </div>
-      <div id="XL">
+      <div iclass="size-btn">
         <div>XL</div>
-        <div class="grey">₹ 340</div>
+        
       </div>
-      <div id="XXL">
+      <div idclass="size-btn">
         <div>XXL</div>
-        <div class="grey">₹ 340</div>
+        
       </div>
      </div>
      <div id="buttons">
@@ -195,31 +259,34 @@
       </ul>
     </div>
     </div>
-  </div>
+`
+document.querySelector("#bag").addEventListener("click",()=>{
+  cartarr.push(obj)
+  localStorage.setItem("cartarr",JSON.stringify(cartarr))
+})
 
-  
 
-  
-</body>
 
-</html>
-<script src="db.json"></script>
-<script>
-    async function x() {
-        try {
-            let res = await fetch("http://localhost:3000/Products", {
-                method: "GET",
-                headers: { "Content-Type": "application/json" }
-            })
 
-            let data = await res.json()
-            console.log(data)
-            localStorage.setItem("data", JSON.stringify(data))
-        } catch (error) {
-            console.log(error)
-        }
-    }
-    x()
+
+
+
+
+    // async function x() {
+    //     try {
+    //         let res = await fetch("http://localhost:3000/Products", {
+    //             method: "GET",
+    //             headers: { "Content-Type": "application/json" }
+    //         })
+
+    //         let data = await res.json()
+    //         console.log(data)
+    //         localStorage.setItem("data", JSON.stringify(data))
+    //     } catch (error) {
+    //         console.log(error)
+    //     }
+    // }
+    // x()
 
 
 
