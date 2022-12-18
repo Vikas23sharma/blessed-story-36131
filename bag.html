@@ -23,54 +23,78 @@
             justify-content: space-evenly;
             width: 100%;
         }
+        body {
+  font-family: Arial, sans-serif;
+}
     </style>
 </head>
 <body style="background-color: white;">
-    <div style="display: flex;padding: 10px; justify-content: space-evenly;border: 1px solid red;" id="bag_navbar">
-        <div style="margin-top: 17px;">My Logo</div>
-        <div  style="margin-top: 17px; width:300px; display: flex; justify-content: space-evenly;">
-            <div>BAG</div>
-            <div>ADDRESS</div>
-            <div>PAYMENT</div>
+    <div style="display: flex;padding: 10px; justify-content: space-evenly;background-color: rgb(176, 235, 235);" id="bag_navbar">
+        <div style="margin-top: 17px;width: 100px;"><img width="100%" src="https://www.freepnglogos.com/uploads/logo-myntra-png/myntra-logo-m-png-3.png" alt=""></div>
+        <div  style="margin-top: 17px; width:350px; display: flex; justify-content: space-evenly;">
+            <p><span style="color:rgb(252, 12, 48);text-decoration: underline; "> BAG</span>----------<span> ADDRESS</span><span>---------- PAYMENT</span></p>
+            <!-- <p>---- ADDRESS ---</p>
+            <p>--- PAYMENT</p> -->
         </div>
         <div style="width: 250px;display: flex;"> 
         <div><img style="width:15%; width:50px" src="https://img.freepik.com/premium-vector/100-secure-logo-secure-badge-design-secure-vector-icons-secure-payments_526569-748.jpg?w=2000" alt=""></div>
         <div style="margin-top: 17px;">100% S E C U R E</div>
         </div>
-    </div>
+    </div><br><br><br>
 
     <div style="width: 70%;margin: auto; display: flex; margin-top: 30px;gap: 30px;" id="bagmain">
         <div style="width: 60%;">
-            <div style="border:1px solid gray;display: flex;justify-content: space-evenly;margin-bottom: 40px;">
+            <div style="border:1px solid rgb(205, 199, 199);display: flex;justify-content: space-evenly;margin-bottom: 40px;">
                 <p>Check delivery time & services</p>
-                <button style="color:red;border:2px solid red;border-radius: 12px;">ENTER PIN CODE</button>
+                <button onmouseover="bigImg(this)" onmouseout="normalImg(this)" style="margin-top: 10px;height: 35px;color:red;border:1px solid red;border-radius: 12px;">ENTER PIN CODE</button>
             </div>
-            <div style="border: 1px solid gray;margin-bottom: 40px; padding-left: 15px;">
+            <div style="border: 1px solid rgb(205, 199, 199);margin-bottom: 40px; padding-left: 15px;">
                 <h3>Avaliable Offers</h3>
                 <p>10% instant Discount on ICICI bank Credit Cards on a  min spend of Rs 3,500.TCA</p>
                 <a style="color: red; text-decoration: none;" href="">Show More</a>
             </div>
-            <div style="display: flex;border: 1px solid gray;margin-bottom: 40px;">
+            <div style="display: flex;border: 1px solid rgb(205, 199, 199);margin-bottom: 40px;">
                 <img width="10%" src="https://www.pngitem.com/pimgs/m/340-3407664_transparent-delivery-van-icon-clipart-png-download-transparent.png" alt="">
                 <p>Yay!No convenience fee on this order</p>
             </div>
-            <div style="display: flex; justify-content: space-evenly;margin-bottom: 40px;">
-                <div style="margin-top: 12px;"><input type="checkbox" id="accept"> 1/1 ITEM SELECTED</div>
+            <div style="display: flex; justify-content: space-evenly;margin-bottom: 0px;">
+                <div style="margin-top: 00px;"><input type="checkbox" id="accept"> 1/1 ITEM SELECTED</div>
                 <P>REMOVE | MOVE TO WISHLIST</P> 
             </div>
-            <div>
+               <div id="bagappend">
+                <div style="border: 1px solid rgb(205, 199, 199); display: flex;justify-content: space-between;">
+                    <div style="width: 200px;"><img onmouseover="bigbag(this)" onmouseout="normalbag(this)" width="100%" src="https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/61C+07k-y1L._UX679_.jpg" alt=""></div>
+                  <div>
+                    <br>
+                    <strong>Tommy Hilfiger</strong>
+                    <p>Navy Blue Striped 15 inch Laptop Overnighter -45 Liters</p>
+                    <p>Sold By Flashtech Retail</p>
+                    <p>$3,299</p>
+                  </div>
 
-            </div>
-            <div style="padding: 10px;border: 1px solid gray;">
+
+                  <!-- <div style="width: 200px;"><img onmouseover="bigbag(this)" onmouseout="normalbag(this)" width="100%" src="https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/61C+07k-y1L._UX679_.jpg" alt=""></div>
+                  <div>
+                    <br>
+                    <strong>Tommy Hilfiger</strong>
+                    <p>Navy Blue Striped 15 inch Laptop Overnighter -45 Liters</p>
+                    <p>Sold By Flashtech Retail</p>
+                    <p>$3,299</p>
+                  </div> -->
+
+                </div>
+                 
+                </div><br>
+            <div style="padding: 10px;border: 1px solid rgb(205, 199, 199);">
                 <a  href="">add more from wishlist</a>
             </div>
         </div>
-        <div style="border-left: 1px solid gray;width: 40%;">
-            <div style="width: 100%;">
+        <div style="border-left: 1px solid rgb(131, 119, 119);width: 40%;">
+            <div style="width: 100%; margin-left: 27px;">
                 <div style="display: flex; justify-content: space-evenly; border: 1px solid teal;">
                     <P><STRong>1 Coupon applied <br> <span style="color: green;">you save additional Rs501/</span></STRong></P>
-                    <button style="margin-top: 10px; height: 25px; color: red;border: 1px solid red; padding: 5px;padding-left: 15px;padding-right: 15px;">EDIT</button>
-                </div>
+                    <button onmouseover="bigImg(this)" onmouseout="normalImg(this)" style="margin-top: 10px; height: 25px; color: red;border: 1px solid red; padding: 5px;padding-left: 15px;padding-right: 15px;">EDIT</button>
+                </div> <br>
                 GIFTING & PERSONALISATION
                 <div style="background-image: url(https://cdn.pixabay.com/photo/2021/01/27/08/42/valentine-5954177_1280.jpg);padding-left: 15px;">
                 <h3>Buying for a loved one?</h3>
@@ -79,16 +103,112 @@
                 </div><hr>
                 <P>SUPPORT TRANSFORMATIVE SOCIAL WORK IN INDIA</P>
                 <input type="checkbox" style="background-color: red;">Suppot Us
-                <div id="donate_btn" style="margin-top: 10px;">
-                    <button>Rs 10</button>
-                    <button>Rs 50</button>
-                    <button>Rs 100</button>
-                    <button>Other</button>
+                <br><div id="donate_btn" style="margin-top: 10px;height: 200ppx;">
+                    <button onmouseover="bigImg(this)" onmouseout="norma(this)" border="0">Rs 10</button>
+                    <button onmouseover="bigImg(this)" onmouseout="norma(this)" border="0">Rs 50</button>
+                    <button onmouseover="bigImg(this)" onmouseout="norma(this)" border="0">Rs 100</button>
+                    <button onmouseover="bigImg(this)" onmouseout="norma(this)" border="0">Other</button>
+                </div><br>
+                <a style="color: red;" href="">Know More</a><hr>
+                <h3>PRICE DETAILS(1 ITEM)</h3>
+                <div style="display: flex; justify-content: space-between;">
+                    <div>Total MRP</div>
+                    <div>$10,999</div>
                 </div>
-                <a style="color: red;" href="">Know More</a>
+                <div  style="display: flex;  justify-content: space-between;">
+                    <div>Discount on MRP</div>
+                    <div>-$7,700</div>
+                </div>
+                <div  style="display: flex;  justify-content: space-between;">
+                    <div>Coupon Discount</div>
+                    <div>Apply Coupon</div>
+                </div>
+                <div style="display: flex;  justify-content: space-between;">
+                    <div>Convenience Fee <span style="color: rgb(255, 136, 0);">Know More</span></div>
+                    <div>FREE</div>
+                </div><br><hr>
+                <div style="display: flex;  justify-content: space-between;">
+                    <div>Total Amount</div>
+                    <div>$3,299</div>
+                </div><br>
+                <button id="place-order" onmouseover="bigImg(this)" onmouseout="normalImg(this)" style=" font-size: 20px;padding: 7px;border: none; color: white;background-color: rgb(207, 72, 72);width: 100%;">PLACE ORDER</button>
             </div>
         </div>
 
+    </div><br><br><br>
+
+    <div style="display: flex; justify-content: space-around;width: 80%;margin: auto;">
+        <div style="display: flex;justify-content: space-around;" >
+            <div style="width: 100px;"><img onmouseover="bigbag(this)" onmouseout="normalbag(this)" width="100%" src="https://constant.myntassets.com/checkout/assets/img/footer-bank-ssl.png" alt=""></div>
+            <div style="width: 100px;"><img  onmouseover="bigbag(this)" onmouseout="normalbag(this)" width="100%" src="https://constant.myntassets.com/checkout/assets/img/footer-bank-visa.png" alt=""></div>
+            <div style="width: 100px;"><img  onmouseover="bigbag(this)" onmouseout="normalbag(this)" width="100%" src="https://constant.myntassets.com/checkout/assets/img/footer-bank-mc.png" alt=""></div>
+            <div style="width: 100px;"><img onmouseover="bigbag(this)" onmouseout="normalbag(this)" width="100%" src="https://constant.myntassets.com/checkout/assets/img/footer-bank-ae.png" alt=""></div>
+            <div style="width: 100px;"><img  onmouseover="bigbag(this)" onmouseout="normalbag(this)" width="100%" src="https://constant.myntassets.com/checkout/assets/img/footer-bank-dc.png" alt=""></div>
+            <div style="width: 100px;"><img onmouseover="bigbag(this)" onmouseout="normalbag(this)" width="100%" src="https://constant.myntassets.com/checkout/assets/img/footer-bank-nb.png" alt=""></div>
+            <div style="width: 100px;"><img onmouseover="bigbag(this)" onmouseout="normalbag(this)" width="100%" src="https://constant.myntassets.com/checkout/assets/img/footer-bank-cod.png" alt=""></div>
+            <div style="width: 100px;"><img onmouseover="bigbag(this)" onmouseout="normalbag(this)" width="100%" src="https://constant.myntassets.com/checkout/assets/img/footer-bank-rupay.png" alt=""></div>
+            <div style="width: 100px;"><img onmouseover="bigbag(this)" onmouseout="normalbag(this)" width="100%" src="https://constant.myntassets.com/checkout/assets/img/footer-bank-paypal.png" alt=""></div>
+            <div style="width: 100px;"><img onmouseover="bigbag(this)" onmouseout="normalbag(this)" width="100%" src="https://constant.myntassets.com/checkout/assets/img/footer-bank-bhim.png" alt=""></div>
+        </div>
+        <div  style="font-style:Arial;margin-top: 12px;">
+            Need Help? Contact Us
+        </div>
     </div>
 </body>
+
+<script>
+
+function bigImg(x) {
+  x.style.color = "white";
+  x.style.padding = "10px";
+  x.style.backgroundColor = "teal";
+}
+
+function normalImg(x) {
+  x.style.padding = "5px"
+  x.style.color = "white";
+  x.style.backgroundColor = "rgb(207, 72, 72)";
+}
+
+function bigbag(x){
+x.style.width = "120%";
+}
+
+function normalbag(x){
+    x.style.width = "100%";
+}
+function norma(x){
+x.style.backgroundColor = "green";
+x.style.padding = "5px";
+}
+
+   let order = document.getElementById("place-order");
+   order.addEventListener("click",function(){
+    window.location.href = "address.html";
+   })
+
+
+   let bagdata = JSON.stringify(localStorage.getItem("number"));
+   let bagappend = document.getElementById("bagappend");
+//    bagappend.innerHTML = "";
+   for(let i=0;i<bagdata.length;i++){
+    let data = {};
+        data = bagdata[i];
+       let data_div = document.createElement("div")
+       data_div.innerHTML = `
+       <div style="border: 1px solid rgb(205, 199, 199); display: flex;justify-content: space-between;">
+           <div style="width: 200px;"><img onmouseover="bigbag(this)" onmouseout="normalbag(this)" width="100%" src=${data.image1} alt=""></div>
+                  <div>
+                    <br>
+                    <strong>${data.brand}</strong>
+                    <p>${data.description}</p>
+                    <p>${data.categories}</p>
+                    <p>${data.price}</p>
+           </div> 
+           </div>
+       `
+    //    let bagappend = document.getElementById("bagappend");
+       bagappend.append(data_div);
+   }
+</script>
 </html>
