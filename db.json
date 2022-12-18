@@ -1,5 +1,5 @@
 {
-  "posts" : [
+  "posts": [
     {
       "id": 1,
       "title": "json-server",
@@ -13,7 +13,7 @@
       "postId": 1
     }
   ],
-  "Products" : [
+  "Products": [
     {
       "id": 7,
       "categories": "tshirt",
@@ -37,7 +37,7 @@
     },
     {
       "id": 3,
-      "categories": "tshirt",
+      "categories": "Lounge Tshirt",
       "size": "Sizes : 39, 40, 42, 44...",
       "title": "Men White & Navy Blue Pure Cotton Striped Polo Collar T-shirt",
       "price": 699,
@@ -79,7 +79,7 @@
     },
     {
       "id": 2,
-      "categories": "tshirt",
+      "categories": "Lounge Tshirt",
       "size": "Sizes : 39, 40, 42, 44...",
       "title": "Mustard Yellow Printed Cotton Pure Cotton T-shirt",
       "price": 799,
@@ -121,7 +121,7 @@
     },
     {
       "id": 1,
-      "categories": "tshirt",
+      "categories": "Lounge Tshirt",
       "size": "Sizes : 39, 40, 42, 44...",
       "title": "Men Navy Blue Striped T-shirt",
       "price": 359,
@@ -163,7 +163,7 @@
     },
     {
       "id": 4,
-      "categories": "tshirt",
+      "categories": "Lounge Tshirt",
       "size": "Sizes : 39, 40, 42, 44...",
       "title": "Men Blue White Printed Round Neck Pure Cotton T-shirt",
       "price": 269,
@@ -226,7 +226,7 @@
     },
     {
       "id": 6,
-      "categories": "tshirt",
+      "categories": "Lounge Tshirt",
       "size": "Sizes : 39, 40, 42, 44...",
       "title": "Men Mauve Solid Polo Collar T-shirt",
       "price": 909,
@@ -625,7 +625,7 @@
     },
     {
       "id": 29,
-      "categories": "tshirt",
+      "categories": "Lounge Tshirt",
       "size": "Sizes : 39, 40, 42, 44...",
       "title": "Men Navy Blue Printed Polo Collar Pure Cotton Slim Fit T-shirt",
       "price": 2374,
@@ -688,7 +688,7 @@
     },
     {
       "id": 32,
-      "categories": "tshirt",
+      "categories": "Lounge Tshirt",
       "size": "Sizes : 39, 40, 42, 44...",
       "title": "Men Grey White Colourblocked Polo Collar Pure Cotton T-shirt",
       "price": 899,
@@ -730,7 +730,7 @@
     },
     {
       "id": 34,
-      "categories": "tshirt",
+      "categories": "Lounge Tshirt",
       "size": "Sizes : 39, 40, 42, 44...",
       "title": "Men White Solid Round Neck Layered T-shirt",
       "price": 6299,
