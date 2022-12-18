@@ -1,62 +1,4 @@
-// import { fetchUser, updateWishlist } from "./loginSystem.js";    
 
-// document.querySelector("title").append(``);
-//Checking if any user is signed in... If yes, then fetching the user information from lognSystem.
-//Here I am using a index system to fetch the logged in user from the list of total users
-// let isSignedIn = localStorage.getItem("isSignedIn") || "false";
-// let signedIndex;
-// let currentUser = null;
-// if (isSignedIn == "true") {
-//   signedIndex = localStorage.getItem("signedInUser");
-//   currentUser = fetchUser(signedIndex);
-//   document.querySelector(".profile_button").classList.add("hidden");
-
-//   if(currentUser.hasOwnProperty("name")) {
-//     document.querySelector("#welcome").textContent = "Hello " + currentUser.name;
-//   } else {
-//     document.querySelector("#welcome").textContent = "Hello Async User";
-//   }
-  
-//   document.querySelector(".number_div").textContent = currentUser.phone;
-//   document.querySelectorAll("#loginSpecial").forEach((elem) => {
-//     elem.classList.remove("hidden");
-//     if (currentUser.cart.length) {
-//       document.querySelector("#cart-counter").textContent =
-//         currentUser.cart.length;
-//       document.querySelector("#cart-counter").classList.remove("hidden");
-//       let x = setInterval(function () {
-//         currentUser = fetchUser(signedIndex);
-//         document.querySelector("#cart-counter").textContent =
-//           currentUser.cart.length;
-//       }, 1000);
-//     }
-//   });
-// }
-
-//Adding functionality to the logout button
-// document
-//   .querySelectorAll(".profile_text")
-//   [document.querySelectorAll(".profile_text").length - 1].addEventListener(
-//     "click",
-//     function () {
-//       localStorage.setItem("isSignedIn", "false");
-//       location.reload();
-//     }
-//   );
-
-//   document
-//   .querySelectorAll(".profile_text")
-//   [document.querySelectorAll(".profile_text").length - 2].addEventListener(
-//     "click",
-//     function () {
-//       window.location.href = './editprofile.html';
-//     }
-//   );
-
-// console.log(currentUser);
-
-// Fetching data for mapping
-// console.log("dfdf")
 import mappingDataFetcher from "./home_page_catog_list.js";
 mappingDataFetcher();
 let map_data = JSON.parse(localStorage.getItem("category_array"));
@@ -94,6 +36,7 @@ mapBox.addEventListener("mouseleave", function () {
 
 //Adding hover for the mapBox on navCategory
 navCategory.forEach((elem, index) => {
+  // elem.style.border = "2px solid red";
   if (index == 5) {
     return;
   }
@@ -126,9 +69,11 @@ function displayFlex(index) {
 
   //Write data mapping function here
   let current_data = map_data[index];
+  // console.log('current_data:', current_data)
   mapCategoryData(current_data, index);
   navCategory[index].style.borderBottom = "4px solid " + map_colors[index];
   //Keep displaying data if the cursor moves from category selector to the hidden div
+
   mapBox.addEventListener("mouseover", function () {
     mapBox.innerHTML = "";
     mapCategoryData(current_data, index);
@@ -149,6 +94,7 @@ function mapCategoryData(data, index) {
     return;
   }
   data.forEach((elem) => {
+    // console.log('elem:', elem)
     let currentBox = document.createElement("div");
 
     currentBox.setAttribute("id", "nav_map_innerBox");
@@ -156,14 +102,16 @@ function mapCategoryData(data, index) {
 
     currentBox.addEventListener("click", function () {
       console.log("dfdf");
-      // console.log('dfd')
-      // window.location.href = "./menInter.html"
+    
+      window.location.href = "./menInter.html"
     });
 
     //mapping the internal data on the current box
     for (let i = 0; i < elem.length; i++) {
       let line = document.createElement("p");
-
+      let anchor=document.createElement("a")
+     anchor.setAttribute("href","https://github.com/PrashantGIT7388/blessed-story-3613")
+     anchor.append(line)
       line.style.cursor = "pointer";
       if (i == 0) {
         //   line.setAttribute('class', "innerHeading");
@@ -174,9 +122,11 @@ function mapCategoryData(data, index) {
 
       line.setAttribute("class", "nav_innerBox_text");
 
-      line.textContent = elem[i];
-
-      currentBox.append(line);
+      line.innerText= elem[i];
+      // let nav_innerBox_text=document.getElementsByClassName("nav_innerBox_text");
+   
+    //  console.log(elem[1]) 
+      currentBox.append(anchor);
     }
 
     mapBox.append(currentBox);
@@ -302,3 +252,4 @@ document
       window.location.href = "searchpage.html";
     }
   })
+
