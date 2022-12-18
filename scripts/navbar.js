@@ -109,7 +109,9 @@ function mapCategoryData(data, index) {
     //mapping the internal data on the current box
     for (let i = 0; i < elem.length; i++) {
       let line = document.createElement("p");
-     
+      let anchor=document.createElement("a")
+     anchor.setAttribute("href","https://github.com/PrashantGIT7388/blessed-story-3613")
+     anchor.append(line)
       line.style.cursor = "pointer";
       if (i == 0) {
         //   line.setAttribute('class', "innerHeading");
@@ -120,10 +122,11 @@ function mapCategoryData(data, index) {
 
       line.setAttribute("class", "nav_innerBox_text");
 
-      line.textContent = elem[i];
-      
+      line.innerText= elem[i];
+      // let nav_innerBox_text=document.getElementsByClassName("nav_innerBox_text");
+   
     //  console.log(elem[1]) 
-      currentBox.append(line);
+      currentBox.append(anchor);
     }
 
     mapBox.append(currentBox);
