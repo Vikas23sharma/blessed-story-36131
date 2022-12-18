@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>payment</title>
+    <style>
+         body {
+           font-family: Arial, sans-serif;
+        }
+        #payment-method>button{
+            color: black;
+            padding: 6px;
+            border: none;
+            font-size: 18px;
+            text-align: left;
+        }
+        .hover{
+            color: red;
+        }
+
+    </style>
+</head>
+<body>
+    <div style="display: flex;padding: 10px; justify-content: space-evenly;background-color: rgb(176, 235, 235);" id="bag_navbar">
+        <div style="margin-top: 17px;width: 100px;"><img width="100%" src="https://www.freepnglogos.com/uploads/logo-myntra-png/myntra-logo-m-png-3.png" alt=""></div>
+        <div  style="margin-top: 17px; width:350px; display: flex; justify-content: space-evenly;">
+            <p>BAG ----------<span> ADDRESS</span>---------- <span style="color:rgb(252, 12, 48);text-decoration: underline; ">PAYMENT</span></p>
+            
+        </div>
+        <div style="width: 250px;display: flex;"> 
+        <div><img style="width:15%; width:50px" src="https://img.freepik.com/premium-vector/100-secure-logo-secure-badge-design-secure-vector-icons-secure-payments_526569-748.jpg?w=2000" alt=""></div>
+        <div style="margin-top: 17px;">100% S E C U R E</div>
+        </div>
+    </div><br><br><br>
+    <div style="width: 70%; margin: auto; display: flex;justify-content: space-evenly; gap: 30px;">
+        <div>
+            <div style="border: 1px solid rgb(245, 233, 233); padding: 8px;">
+                <strong>Bank Offer</strong>
+                <p>5% Unlimited Cashback on Flipkart Axis Bank Credit Card. TCA</p>
+                <a style="color: red;text-decoration: none;" href="">Show More></a>
+            </div><br>
+            <strong>Chose Payment Mode</strong><br><br>
+            <div style="display: flex;justify-content: space-between;gap: 20px;">
+                <div id="payment-method" style="display: flex;flex-direction: column; gap: 4px;">
+                    <button onmouseover="bigImg(this)" onmouseout="normalImg(this)" border="0" class="payment">Cash On Delivery</button>
+                    <button onmouseover="bigImg(this)" onmouseout="normalImg(this)" border="0" class="payment">Cradit/Debit Card</button>
+                    <button onmouseover="bigImg(this)" onmouseout="normalImg(this)" border="0" class="payment">Cradit/Debit Card</button>
+                    <button onmouseover="bigImg(this)" onmouseout="normalImg(this)" border="0" class="payment">PhonePe/Google pay</button>
+                    <button onmouseover="bigImg(this)" onmouseout="normalImg(this)" border="0" class="payment">Paytem/Wallets</button>
+                    <button onmouseover="bigImg(this)" onmouseout="normalImg(this)" border="0" class="payment">Net Banking</button>
+                    <button onmouseover="bigImg(this)" onmouseout="normalImg(this)" border="0" class="payment">EMI/Pay Later</button>
+                </div>
+
+                <!-- <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" border="0" src="smiley.gif" alt="Smiley" width="32" height="32"> -->
+                <div style="width: 60%;">
+                    <p>Pay on delivery(Cash/UPI)</p>
+                    <img width="auto" height="100px" src="https://media.gettyimages.com/id/1382913375/vector/vector-set-of-number.jpg?s=612x612&w=gi&k=20&c=EUkOcZ5oB1hyU2Yu52KRK1MAFp94hi1dIEE4kfZB4XI=" alt="">
+                    <input id="secure" type="text"placeholder="Enter Security Code"><BR></BR>
+                    <button id="finalorder" style=" font-size: 20px;padding: 7px;border: none; color: white;background-color: rgb(144, 131, 239);width: 100%;">PLACE ORDER</button>
+                </div>
+            </div><br>
+            <div style="padding: 7px;display: flex;justify-content: space-between; gap: 30px;border: 1px solid rgb(245, 233, 233);">
+                <div>Have a Gift Card?</div>
+                <div style="color:red;">APPLY GIFT CARD</div>
+            </div>
+        </div>
+        <div style=" width: 40%;">
+            <div style="width: 70%; margin: auto;">
+                <h3>PRICE DETAILS(1 ITEM)</h3>
+                <div style="display: flex; justify-content: space-between;">
+                    <div>Total MRP</div>
+                    <div>$10,999</div>
+                </div>
+                <div  style="display: flex;  justify-content: space-between;">
+                    <div>Discount on MRP</div>
+                    <div>-$7,700</div>
+                </div>
+                <div  style="display: flex;  justify-content: space-between;">
+                    <div>Coupon Discount</div>
+                    <div>Apply Coupon</div>
+                </div>
+                <div style="display: flex;  justify-content: space-between;">
+                    <div>Convenience Fee <span style="color: red;">Know More</span></div>
+                    <div>FREE</div>
+                </div><br><hr>
+                <div style="display: flex;  justify-content: space-between;">
+                    <div>Total Amount</div>
+                    <div>$3,299</div>
+                </div><br>
+                <button id="place-order" style=" font-size: 20px;padding: 7px;border: none; color: white;background-color: rgb(144, 131, 239);width: 100%;">PLACE ORDER</button>
+            </div>
+        </div>
+        
+    </div> <br><br><br>
+    <div style="display: flex; justify-content: space-around;width: 80%;margin: auto;">
+        <div style="display: flex;justify-content: space-around;" >
+            <div style="width: 100px;height: 50px;"><img width="100%" src="https://constant.myntassets.com/checkout/assets/img/footer-bank-ssl.png" alt=""></div>
+            <div style="width: 100px;height: 50px;"><img width="100%" src="https://constant.myntassets.com/checkout/assets/img/footer-bank-visa.png" alt=""></div>
+            <div style="width: 100px;height: 50px;"><img width="100%" src="https://constant.myntassets.com/checkout/assets/img/footer-bank-mc.png" alt=""></div>
+            <div style="width: 100px;height: 50px;"><img width="100%" src="https://constant.myntassets.com/checkout/assets/img/footer-bank-ae.png" alt=""></div>
+            <div style="width: 100px;height: 50px;"><img width="100%" src="https://constant.myntassets.com/checkout/assets/img/footer-bank-dc.png" alt=""></div>
+            <div style="width: 100px;height: 50px;"><img width="100%" src="https://constant.myntassets.com/checkout/assets/img/footer-bank-nb.png" alt=""></div>
+            <div style="width: 100px;height: 50px;"><img width="100%" src="https://constant.myntassets.com/checkout/assets/img/footer-bank-cod.png" alt=""></div>
+            <div style="width: 100px;height: 50px;"><img width="100%" src="https://constant.myntassets.com/checkout/assets/img/footer-bank-rupay.png" alt=""></div>
+            <div style="width: 100px;height: 50px;"><img width="100%" src="https://constant.myntassets.com/checkout/assets/img/footer-bank-paypal.png" alt=""></div>
+            <div style="width: 100px;height: 50px;"><img width="100%" src="https://constant.myntassets.com/checkout/assets/img/footer-bank-bhim.png" alt=""></div>
+        </div>
+        <div  style="font-style:Arial;margin-top: 12px;">
+            Need Help? Contact Us
+        </div>
+    </div>
+</body>
+
+<script>
+   
+
+
+    function bigImg(x) {
+//   x.style.height = "%";
+//   x.style.width = "110%";
+  x.style.color = "red";
+  x.style.padding = "10px";
+  x.style.color = "red";
+//   x.style.border = "2px solid teal"
+  x.style.backgroundColor = "rgb(131, 218, 239)"
+}
+
+function normalImg(x) {
+  x.style.height = "auto";
+  x.style.width = "auto";
+  x.style.padding = "5px"
+  x.style.color = "black";
+//   x.style.border = "none";
+  x.style.backgroundColor = "pink"
+}
+
+let order = document.getElementById("finalorder");
+order.addEventListener("click",function(){
+    console.log("pawan")
+    let secquerity = document.getElementById("secure").value
+
+    if(secquerity === "1234567890"){
+        alert("Order Placed")
+        window.location.href = "index.html"
+    }
+    else{
+        alert("Enter Correct code")
+    }
+    
+})
+</script>
+</html>
