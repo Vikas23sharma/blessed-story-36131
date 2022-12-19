@@ -25,7 +25,15 @@
         }
         body {
   font-family: Arial, sans-serif;
-}
+}       
+        #delet_item{
+            padding:1% 2%;
+            background-color:rgb(207, 72, 72);
+            color:white;
+            width: 40%;
+            border: 0px;
+        }
+        
     </style>
 </head>
 <body style="background-color: white;">
@@ -206,7 +214,7 @@ x.style.padding = "5px";
                     <p>Title: ${data.description}</p>
                     <p>${data.categories}</p>
                     <p>MRP: ${data.price}</p>
-                    <button id="delet_item" style="padding:6px;border:2px solid red;color:black;">DELETE ITEM</button>
+                    <button id="delet_item">DELETE</button>
            </div> 
            </div>
        `
@@ -241,12 +249,18 @@ x.style.padding = "5px";
    delete_btn.addEventListener("click",function(){
      
     let bagdata = JSON.parse(localStorage.getItem("cartarr"));
+    console.log(bagdata)
+    
     for(let i=0;i<bagdata.length;i++){
     let data = {};
         data = bagdata[i];
         
+        bagdata.splice(i,1)
+        localStorage.setItem("cartarr",JSON.stringify(bagdata))
+        bagappend.append(data)
     }
-   })
+     window.location.reload()
+    })
 
 </script>
 </html>
