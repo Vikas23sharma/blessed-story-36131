@@ -24,7 +24,6 @@
 
   #left div{
     transition: .5s;
-
   }
   #left img{
     width: 98%;
@@ -141,17 +140,52 @@
   #small{
     font-size: 15px;
   }
-
-  /* .size-btn{
-    width: 40px;
-    border-radius: 90%;
-  } */
+body{
+  margin: 0px;
+  padding: 0px;
+}
+  .mynavbar{
+    display: flex;
+    justify-content: space-around;
+    background-color: white;
+    height: 80px;
+    align-items: center;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+  .mynavbar img{
+    width: 90px;
+    height: 80px;
+  }
+  #navimg1{
+    width: 60px;
+    height: 60px;
+  }
+  #navimg2{
+    width: 60px;
+    height: 60px;
+  }
+  #navimg3{
+    width: 60px;
+    height: 60px;
+  }
  
   </style>  
 </head>
 
 <body>
- 
+
+  <div id="navbar-categories" class="mynavbar">
+    <a href="index.html"><img src="http://store-images.s-microsoft.com/image/apps.50598.9007199266424190.134933bb-7447-4324-aa89-9613c5066abe.9a245a47-6d61-467a-8cb9-4be03920c736" width="60" height="40" alt="m"/></a>
+    <div class="navbar-categories-li">MEN</div>
+    <div class="navbar-categories-li">WOMEN</div>
+    <div class="navbar-catefdsgories-li">KIDS</div>
+    <div class="navbar-categfgdgories-li">HOME & LIVING</div>
+    <div class="navbar-categories-li">BEAUTY</div>
+    <div class="navbar-categories-li">STUDIO</div>
+    <img id="navimg1" src="/images/ss1.png" alt="">
+    <img id="navimg2" src="/images/ss2.png" alt="">
+    <a  href="bag.html"><img id="navimg3" src="/images/ss3.png" alt=""></a>
+  </div>
   <!-- ----single-product-description--->
   <h4 id="path"><b class="grey">Home</b> /<b class="grey">Clothing</b>  /<b class="grey">Men Clothing</b>  /<b class="grey">Tshirts</b></h4> 
    <!-- /<b> Huetrap Tshirts</b> /<b>More By Huetrap</b>   -->
@@ -160,38 +194,16 @@
     <!-- append here -->
   </div>
 </body>
-
 </html>
 <script src="db.json"></script>
 <script>
-  let obj1={
-      "id": 12,
-      "categories": "tshirt",
-      "size": "Sizes : 39, 40, 42, 44...",
-      "title": "Black Printed Slim Fit Pure Cotton T-shirt",
-      "price": 494,
-      "gender": "men",
-      "description": "Black Printed Slim Fit Pure Cotton T-shirt",
-      "brand": "WROGN",
-      "color": "Black",
-      "discount": 45,
-      "off_price": 899,
-      "images": {
-        "image1": "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/1320997/2016/7/19/11468929336914-WROGN-Black-Printed-Slim-Fit-T-shirt-4071468929335948-1.jpg",
-        "image2": "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/1320997/2016/7/19/11468929336885-WROGN-Black-Printed-Slim-Fit-T-shirt-4071468929335948-2.jpg",
-        "image3": "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/1320997/2016/7/19/11468929336863-WROGN-Black-Printed-Slim-Fit-T-shirt-4071468929335948-3.jpg",
-        "image4": "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/1320997/2022/3/2/19dbaa30-f887-4e11-a90c-e8d1eba6e7bc1646224207918-WROGN-Black-Printed-Slim-Fit-Pure-Cotton-T-shirt-87316462242-6.jpg"
-      },
-      "rating": 4.2,
-      "count": 3.3
-    }
-
-let obj=JSON.parse(localStorage.getItem("individualProduct"))
+  
+let obj=JSON.parse(localStorage.getItem("individualProduct"));
 let cartarr=JSON.parse(localStorage.getItem("cartarr"))||[];
-
 let main=document.querySelector("#container");
-main.innerHTML=`
+main.innerHTML=`  
 <div id="left">
+
       <div id="img1"><img src="${obj.images.image1}" alt="1"></div>
       <div id="img2"><img src="${obj.images.image2}" alt="2"></div>
       <div id="img3"><img src="${obj.images.image3}" alt="3"></div>
@@ -262,28 +274,10 @@ main.innerHTML=`
 document.querySelector("#bag").addEventListener("click",()=>{
   cartarr.push(obj)
   localStorage.setItem("cartarr",JSON.stringify(cartarr))
+  alert("added to cart successfully")
 })
 
 
-
-
-
-
-    // async function x() {
-    //     try {
-    //         let res = await fetch("http://localhost:3000/Products", {
-    //             method: "GET",
-    //             headers: { "Content-Type": "application/json" }
-    //         })
-
-    //         let data = await res.json()
-    //         console.log(data)
-    //         localStorage.setItem("data", JSON.stringify(data))
-    //     } catch (error) {
-    //         console.log(error)
-    //     }
-    // }
-    // x()
 
 
 
