@@ -55,11 +55,11 @@
                 <h3>PRICE DETAILS(1 ITEM)</h3>
                 <div style="display: flex; justify-content: space-between;">
                     <div>Total MRP</div>
-                    <div>$10,999</div>
+                    <div id="totalmrp">$,999</div>
                 </div>
                 <div  style="display: flex;  justify-content: space-between;">
                     <div>Discount on MRP</div>
-                    <div>-$7,700</div>
+                    <div id="total_price">-$7,700</div>
                 </div>
                 <div  style="display: flex;  justify-content: space-between;">
                     <div>Coupon Discount</div>
@@ -71,7 +71,7 @@
                 </div><br><hr>
                 <div style="display: flex;  justify-content: space-between;">
                     <div>Total Amount</div>
-                    <div>$3,299</div>
+                    <div id="total_ammount">$3,299</div>
                 </div><br>
                 <button id="place-order" style=" font-size: 20px;padding: 7px;border: none; color: white;background-color: rgb(144, 131, 239);width: 100%;">PLACE ORDER</button>
             </div>
@@ -79,6 +79,24 @@
     </div>
 </body>
 <script>
+
+
+let price_dat = JSON.parse(localStorage.getItem("cart-price"));
+console.log(price_dat);
+
+  let totalmr = document.getElementById("totalmrp");
+   totalmr.innerText = "pawan";
+   totalmrp.innerHTML = price_dat[0];
+
+   let total_mrp = document.getElementById("total_price")
+   total_mrp.innerHTML = "";
+   total_mrp.innerHTML = price_dat[1];
+
+   let total_ammount = document.getElementById("total_ammount");
+   total_ammount.innerHTML = "";
+   total_ammount.innerHTML = price_dat[1];
+
+
     let address = document.getElementById("add-address");
     address.addEventListener("click",function(){
         window.location.href  = "payment.html";
@@ -93,6 +111,8 @@ function normalImg(x) {
   x.style.padding = "5px"
   x.style.color = "white";
   x.style.backgroundColor = "rgb(207, 72, 72)";
+
+
 }
 </script>
 </html>
