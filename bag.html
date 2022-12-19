@@ -113,11 +113,11 @@
                 <h3>PRICE DETAILS(1 ITEM)</h3>
                 <div style="display: flex; justify-content: space-between;">
                     <div>Total MRP</div>
-                    <div>$10,999</div>
+                    <div id="totalmrp">$10,999</div>
                 </div>
                 <div  style="display: flex;  justify-content: space-between;">
                     <div>Discount on MRP</div>
-                    <div>-$7,700</div>
+                    <div id="total_price">-$7,700</div>
                 </div>
                 <div  style="display: flex;  justify-content: space-between;">
                     <div>Coupon Discount</div>
@@ -129,7 +129,7 @@
                 </div><br><hr>
                 <div style="display: flex;  justify-content: space-between;">
                     <div>Total Amount</div>
-                    <div>$3,299</div>
+                    <div id="total_ammount">$3,299</div>
                 </div><br>
                 <button id="place-order" onmouseover="bigImg(this)" onmouseout="normalImg(this)" style=" font-size: 20px;padding: 7px;border: none; color: white;background-color: rgb(207, 72, 72);width: 100%;">PLACE ORDER</button>
             </div>
@@ -171,11 +171,11 @@ function normalImg(x) {
 }
 
 function bigbag(x){
-x.style.width = "120%";
+x.style.border = "2px solid red";
 }
 
 function normalbag(x){
-    x.style.width = "100%";
+    x.style.border = "none";
 }
 function norma(x){
 x.style.backgroundColor = "green";
@@ -188,27 +188,65 @@ x.style.padding = "5px";
    })
 
 
-   let bagdata = JSON.stringify(localStorage.getItem("number"));
+   let bagdata = JSON.parse(localStorage.getItem("cartarr"));
    let bagappend = document.getElementById("bagappend");
-//    bagappend.innerHTML = "";
+   bagappend.innerHTML = "";
+   let total_price = 0
+   let off_price = 0;
    for(let i=0;i<bagdata.length;i++){
     let data = {};
         data = bagdata[i];
        let data_div = document.createElement("div")
        data_div.innerHTML = `
-       <div style="border: 1px solid rgb(205, 199, 199); display: flex;justify-content: space-between;">
-           <div style="width: 200px;"><img onmouseover="bigbag(this)" onmouseout="normalbag(this)" width="100%" src=${data.image1} alt=""></div>
-                  <div>
+       <div style="border: 1px solid rgb(205, 199, 199); display: flex;justify-content: space-between; gap:30px;">
+           <div style="width: 40%;"><img onmouseover="bigbag(this)" onmouseout="normalbag(this)" width="100%" src=${data.images.image1} alt=""></div>
+                  <div style="width: 60%;">
                     <br>
-                    <strong>${data.brand}</strong>
-                    <p>${data.description}</p>
+                    <strong>Brand: ${data.brand}</strong>
+                    <p>Title: ${data.description}</p>
                     <p>${data.categories}</p>
-                    <p>${data.price}</p>
+                    <p>MRP: ${data.price}</p>
+                    <button id="delet_item" style="padding:6px;border:2px solid red;color:black;">DELETE ITEM</button>
            </div> 
            </div>
        `
+
+       total_price+=data.price;
+       off_price+=data.off_price;
+
+
     //    let bagappend = document.getElementById("bagappend");
        bagappend.append(data_div);
+
+       
    }
+   let totalmrp = document.getElementById("totalmrp");
+   totalmrp.innerHTML = "";
+   totalmrp.innerHTML = off_price;
+
+   let total_mrp = document.getElementById("total_price")
+   total_mrp.innerHTML = "";
+   total_mrp.innerHTML = total_price;
+//    console.log(off_price);
+
+   let total_ammount = document.getElementById("total_ammount");
+   total_ammount.innerHTML = "";
+   total_ammount.innerHTML = total_price;
+
+   let price_arr = [off_price,total_price];
+   localStorage.setItem("cart-price",JSON.stringify(price_arr));
+
+
+   let delete_btn = document.getElementById("delet_item");
+   delete_btn.addEventListener("click",function(){
+     
+    let bagdata = JSON.parse(localStorage.getItem("cartarr"));
+    for(let i=0;i<bagdata.length;i++){
+    let data = {};
+        data = bagdata[i];
+        
+    }
+   })
+
 </script>
 </html>
